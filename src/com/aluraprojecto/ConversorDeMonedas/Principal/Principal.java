@@ -28,8 +28,10 @@ public class Principal {
                 case 4 -> { divisaBase = "BRL"; divisaACambiar = "USD";}
                 case 5 -> { divisaBase = "USD"; divisaACambiar = "PEN";}
                 case 6 -> { divisaBase = "PEN"; divisaACambiar = "USD";}
-                default -> { System.out.println("Ingrese un valor valido");
-                    break;
+                default -> {
+                    System.out.println("Ingrese un valor valido");
+                    System.out.println("---------------------------------");
+                    continue;
                 }
             }
             System.out.println("Ingresa el valor que deseas convertir:");

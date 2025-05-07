@@ -2,23 +2,25 @@ package com.aluraprojecto.ConversorDeMonedas.Principal;
 
 import com.aluraprojecto.ConversorDeMonedas.Consulta.ConsultaAPI;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Principal {
+    static final int OPCION_SALIR = 7;
+
     public static void main(String[] args) {
-        int salir = 0;
+        int opcionUsuario = 0;
         String divisaBase = "USD";
         String divisaACambiar = "PEN";
         double valorDelUsuario = 0;
         double numeroConvertido = 0;
         Scanner usuario = new Scanner(System.in);
         ConsultaAPI nuevaConsulta = new ConsultaAPI();
-        while (salir != 7) {
+
+        while (opcionUsuario != OPCION_SALIR) {
             ImprimirMenu();
-            int opcionUsuario = usuario.nextInt();
-            if (opcionUsuario == 7) {
-                salir = opcionUsuario;
-            }
+            opcionUsuario = usuario.nextInt();
+
             switch (opcionUsuario) {
                 case 1 -> { divisaBase = "USD"; divisaACambiar = "ARS";}
                 case 2 -> { divisaBase = "ARS"; divisaACambiar = "USD";}
@@ -31,10 +33,28 @@ public class Principal {
                 }
             }
             System.out.println("Ingresa el valor que deseas convertir:");
-            valorDelUsuario = usuario.nextDouble();
+            if (usuario.hasNextDouble()) {
+                valorDelUsuario = usuario.nextDouble();
+                if (valorDelUsuario <= 0) {
+                    System.out.println("El valor debe ser un número positivo. Intente de nuevo.");
+                    continue;
+                }
+            } else {
+                System.out.println("Entrada inválida. Debe ser un número. Intente de nuevo.");
+                usuario.next();
+                continue;
+            }
             numeroConvertido = nuevaConsulta.ObtenerValorDeDivisas(divisaBase, divisaACambiar, valorDelUsuario);
-            System.out.printf("El valor de %.2f [%s] equivale al valor final de %.2f [%s]\n", valorDelUsuario, divisaBase, numeroConvertido, divisaACambiar);
+            if (numeroConvertido != -1) {
+                System.out.printf("El valor de %.2f [%s] equivale al valor final de %.2f [%s]\n",
+                        valorDelUsuario, divisaBase, numeroConvertido, divisaACambiar);
+                System.out.println("-------------------------------------------------------------");
+            } else {
+                System.out.println("La conversión no se pudo realizar, intentelo más tarde");
+            }
         }
+        usuario.close();
+        System.out.println("El programa finalizó correctamente");
     }
 
     public static void ImprimirMenu() {

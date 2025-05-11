@@ -45,3 +45,6 @@ com.aluraprojecto.ConversorDeMonedas
   java -cp .:gson-2.10.1.jar com.aluraprojecto.ConversorDeMonedas.Principal
 ```
 📌 Nota: Reemplaza "fb478f1c74e9190de3a6c5cc" con tu propia API Key de ExchangeRate-API para que funcione correctamente.
+
+### 📝 Licencia
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.

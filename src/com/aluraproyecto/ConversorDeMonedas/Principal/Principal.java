@@ -1,8 +1,9 @@
-package com.aluraprojecto.ConversorDeMonedas.Principal;
+package com.aluraproyecto.ConversorDeMonedas.Principal;
 
-import com.aluraprojecto.ConversorDeMonedas.Consulta.ConsultaAPI;
+import com.aluraproyecto.ConversorDeMonedas.Consulta.ConsultaAPI;
 
-import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
@@ -54,6 +55,7 @@ public class Principal {
             } else {
                 System.out.println("La conversión no se pudo realizar, intentelo más tarde");
             }
+
         }
         usuario.close();
         System.out.println("El programa finalizó correctamente");

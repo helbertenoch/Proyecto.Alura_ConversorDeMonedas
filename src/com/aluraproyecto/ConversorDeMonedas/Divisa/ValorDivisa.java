@@ -1,4 +1,4 @@
-package com.aluraprojecto.ConversorDeMonedas.Divisa;
+package com.aluraproyecto.ConversorDeMonedas.Divisa;
 
 public record ValorDivisa(String result,
                           String documentation,

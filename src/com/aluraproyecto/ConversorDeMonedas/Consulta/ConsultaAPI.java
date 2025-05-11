@@ -1,6 +1,6 @@
-package com.aluraprojecto.ConversorDeMonedas.Consulta;
+package com.aluraproyecto.ConversorDeMonedas.Consulta;
 
-import com.aluraprojecto.ConversorDeMonedas.Divisa.ValorDivisa;
+import com.aluraproyecto.ConversorDeMonedas.Divisa.ValorDivisa;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -8,7 +8,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.sql.SQLOutput;
 
 public class ConsultaAPI {
     public double ObtenerValorDeDivisas(String valorBase, String valorCambio, double numeroBase) {

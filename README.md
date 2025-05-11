@@ -21,7 +21,7 @@ Este proyecto es un **conversor de monedas** hecho en Java que utiliza la [Excha
 ### 📦 Estructura del Proyecto
 
 ```bash
-com.aluraprojecto.ConversorDeMonedas
+com.aluraproyecto.ConversorDeMonedas
 ├── Principal
 │ └──Principal-java
 ├── ConsultaAPI
@@ -32,19 +32,19 @@ com.aluraprojecto.ConversorDeMonedas
 
 ### 🧪 Ejecución
 
-1. Clona el repositorio:
+#### 1. Clona el repositorio:
 ```git bash
    git clone https://github.com/helbertenoch/Proyecto.Alura_ConversorDeMonedas.git
-   cd conversor-monedas-java
+   cd ConversorDeMonedas--Alura
 ```
-2. Asegúrate de tener Java y Gson instalados.
+#### 2. Asegúrate de tener Java y Gson instalados.
 
-3. Compila y ejecuta:
+#### 3. Compila y ejecuta:
 ```bash
-  javac -cp gson-2.10.1.jar com/aluraprojecto/ConversorDeMonedas/**/*.java
-  java -cp .:gson-2.10.1.jar com.aluraprojecto.ConversorDeMonedas.Principal
+  javac -cp gson-2.10.1.jar com/aluraproyecto/ConversorDeMonedas/**/*.java
+  java -cp .:gson-2.10.1.jar com.aluraproyecto.ConversorDeMonedas.Principal
 ```
 📌 Nota: Reemplaza "fb478f1c74e9190de3a6c5cc" con tu propia API Key de ExchangeRate-API para que funcione correctamente.
 
 ### 📝 Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
